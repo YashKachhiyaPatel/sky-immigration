@@ -1,0 +1,63 @@
+<section id="fancy-form">
+  <div class="container">
+    <div class="form-sections">
+
+      <div class="Form-left animation-type">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_bh8hm2b9.json" background="transparent"
+          speed="1" style="width: 400px; height: 450px;" loop autoplay></lottie-player>
+      </div>
+
+
+      <div class="Form-right">
+        <h1 class="text-center">Contact Us</h1>
+
+        <form action="https://formsubmit.co/lifeline242734@gmail.com" method="POST">
+
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col">
+                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+              </div>
+              <div class="col">
+                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+              </div>
+              <div class="col">
+                <input type="hidden" name="_next" value="http://localhost:3000/home">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" class="form-control" name="message" rows="8" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-lg btn-success btn-block">Send</button>
+
+          <!-- <input type="text" placeholder="First Name"><br><br>
+          <input type="text" placeholder="Last Name"> <br><br>
+          <input type="email" id="email" placeholder="Enter Your Email"><br><br>
+          <input type="number" placeholder="Enter Mobile Number"><br><br>
+          <textarea name="" id="" cols="50" rows="3" placeholder="Enter Message"></textarea><br>
+          <button>Send</button> -->
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "lifeline242734@gmail.com",
+        Password: "Yash@#1902",
+        To: 'lifeline242734@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: "SKY-Immigration",
+        Body: "new mail from useer"
+      }).then(
+        message => alert(message)
+      );
+    }
+  </script>
+</section>
